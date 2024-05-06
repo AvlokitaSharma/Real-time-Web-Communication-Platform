@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Chat</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="/static/chat.js"></script>
+</head>
+<body>
+    <div>Welcome, {{ username }}!</div>
+    <div id="chat-container">
+        <ul id="messages"></ul>
+        <form id="message-form" action="">
+            <input type="text" id="input" autocomplete="off"><button>Send</button>
+            <input type="text" id="room" placeholder="Room" autocomplete="off">
+        </form>
+        <form id="file-form" action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file"><button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>
